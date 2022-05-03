@@ -9,4 +9,5 @@
     <string name="release_date">Release date:</string>
     <string name="production_countries">Production countries:</string>
     <string name="search">Search</string>
+    <string name="runtime_minutes">Runtime (minutes):</string>
 </resources>
