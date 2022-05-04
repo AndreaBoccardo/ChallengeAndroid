@@ -31,7 +31,6 @@ class ListFragment : Fragment() {
         adapter.setMiOnClickListener(object : MovieAdapter.miOnClickListener{
             override fun onClickListener(movie: MovieList) {
                 viewModel.getMovieDetail(movie.id)
-                viewModel.id.value = movie.id
                 Navigation.findNavController(requireView()).navigate(R.id.action_listFragment_to_detailFragment)
             }
         })

@@ -21,7 +21,6 @@ class MovieViewModel(application: Application): AndroidViewModel(application) {
     var listMoviesPopular: MutableLiveData<List<MovieList>> = MutableLiveData()
     private val repoApi = ClientRepository()
     private val movieRepo = MovieRepository(application)
-    var id = MutableLiveData<Int>()
     val listMovies = movieRepo.listMovie()
     val movie: MutableLiveData<MovieDatabase> = MutableLiveData()
     val filter = MutableLiveData<String>()
@@ -49,9 +48,9 @@ class MovieViewModel(application: Application): AndroidViewModel(application) {
                 response.body().let {
                     movieRepo.addMovie(addMovieDetail(it!!.id, it.title!!, it.posterPath!!
                         , it.overview!! , it.runtime!!, it.genres!![0].toString()
-                        , it.genres!![1].toString(), it.spokenLanguages!![0].toString()
-                        , it.popularity!!, it.releaseDate!!, it.productionCountries!![0].toString()
-                        , it.productionCountries!![1].toString()))                }
+                        , it.spokenLanguages!![0].toString(), it.popularity!!, it.releaseDate!!
+                        , it.productionCountries!![0].toString()))
+                                       }
             }
 
             override fun onFailure(call: Call<MovieDetail>, t: Throwable) {
@@ -61,10 +60,10 @@ class MovieViewModel(application: Application): AndroidViewModel(application) {
     }
 
     fun addMovieDetail(id: Int, title: String, poster_path: String, overview: String, runtime: Int,
-        genre_one: String, genre_two: String, language: String, popularity: Double, release_date: String,
-        country_one: String, country_two: String) : MovieDatabase{
-        val film = MovieDatabase(id, title, poster_path, overview, runtime, genre_one, genre_two
-        ,language, popularity, release_date, country_one, country_two)
+        genre: String, language: String, popularity: Double, release_date: String,
+        country: String) : MovieDatabase{
+        val film = MovieDatabase(id, title, poster_path, overview, runtime, genre,language
+            , popularity, release_date, country)
         return film
     }
 

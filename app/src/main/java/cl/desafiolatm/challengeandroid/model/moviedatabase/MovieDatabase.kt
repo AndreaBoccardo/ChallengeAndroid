@@ -10,25 +10,21 @@ data class MovieDatabase(
     @PrimaryKey
     var id: Int,
     @ColumnInfo(name = "title")
-    var title: String,
+    var title: String?,
     @ColumnInfo(name = "poster_path")
-    var poster_path: String,
+    var poster_path: String?,
     @ColumnInfo(name = "overview")
-    var overview: String,
+    var overview: String?,
     @ColumnInfo(name = "runtime")
-    var runtime: Int,
-    @ColumnInfo(name = "genre_one")
-    var genre_one: String,
-    @ColumnInfo(name = "genre_two")
-    var genre_two: String,
+    var runtime: Int?,
+    @ColumnInfo(name = "genre")
+    var genre: String?,
     @ColumnInfo(name = "language")
-    var language: String,
+    var language: String?,
     @ColumnInfo(name = "popularity")
-    var popularity: Double,
+    var popularity: Double?,
     @ColumnInfo(name = "release_date")
-    var release_date: String,
-    @ColumnInfo(name = "country_one")
-    var country_one: String,
-    @ColumnInfo(name = "country_two")
-    var country_two: String,
+    var release_date: String?,
+    @ColumnInfo(name = "country")
+    var country: String?
 )

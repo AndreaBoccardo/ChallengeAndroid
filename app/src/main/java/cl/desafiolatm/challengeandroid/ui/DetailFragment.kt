@@ -35,13 +35,11 @@ class DetailFragment : Fragment() {
                     tvTitleDetail.text = it.title
                     tvOverview.text = it.overview
                     tvRuntime.text = it.runtime.toString()
-                    tvGenre1.text = it.genre_one
-                    tvGenre2.text = it.genre_two
+                    tvGenre.text = it.genre
                     tvLanguage.text = it.language
                     tvPopularity.text = it.popularity.toString()
                     tvRelease.text = it.release_date
-                    tvCountry1.text = it.country_one
-                    tvCountry2.text = it.country_two
+                    tvCountry.text = it.country
                 }
             }
         })

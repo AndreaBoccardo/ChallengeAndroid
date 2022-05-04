@@ -82,18 +82,12 @@
                     android:text="@string/genres" />
 
                 <TextView
-                    android:id="@+id/tvGenre1"
+                    android:id="@+id/tvGenre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="TextView" />
 
-                <TextView
-                    android:id="@+id/tvGenre2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="TextView" />
             </LinearLayout>
 
             <LinearLayout
@@ -169,18 +163,12 @@
                     android:text="@string/production_countries" />
 
                 <TextView
-                    android:id="@+id/tvCountry1"
+                    android:id="@+id/tvCountry"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="TextView" />
 
-                <TextView
-                    android:id="@+id/tvCountry2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="TextView" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
