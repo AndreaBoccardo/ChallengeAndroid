@@ -16,7 +16,7 @@
             android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/tvTitleDetalle"
+                android:id="@+id/tvTitleDetail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
@@ -24,7 +24,7 @@
                 android:gravity="center"/>
 
             <ImageView
-                android:id="@+id/ivPictureDetalle"
+                android:id="@+id/ivPictureDetail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:src="@tools:sample/avatars" />

@@ -2,10 +2,12 @@ package cl.desafiolatm.challengeandroid.model.moviedatabase
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 @Entity(tableName = "movie_table")
 data class MovieDatabase(
     @ColumnInfo(name = "id")
+    @PrimaryKey
     var id: Int,
     @ColumnInfo(name = "title")
     var title: String,
